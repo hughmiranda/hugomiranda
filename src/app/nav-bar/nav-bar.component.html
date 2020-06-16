@@ -1,0 +1,24 @@
+<div class="nav-bar" [ngClass]="{'nav--display': displayNavItems}">
+  <div class="nav-toggle" (click)="toggleNavDisplay()">
+    <div class="icon" [ngClass]="{'icon--cross': displayNavItems}">
+      <div id="bar-1" class="bar"></div>
+      <div id="bar-2" class="bar"></div>
+      <div id="bar-3" class="bar"></div>
+    </div>
+  </div>
+  <ul [ngClass]="{'nav-items--display': displayNavItems}">
+    <li (click)="scrollTo('home')">
+      <p>Home</p>
+    </li>
+    <li (click)="scrollTo('about')">
+      <p>
+        About me
+      </p>
+    </li>
+    <li (click)="openCV()">
+      <p>
+        CV
+      </p>
+    </li>
+  </ul>
+</div>

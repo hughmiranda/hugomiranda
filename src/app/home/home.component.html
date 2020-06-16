@@ -1,0 +1,29 @@
+<div class="home">
+  <div id="nebula" class="nebula"></div>
+  <app-nav-bar class="absolute nav-bar"></app-nav-bar>
+  <div class="absolute social">
+    <a href="mailto:hughmiranda94@gmail.com">
+      <img src="/assets/social/email.svg">
+    </a>
+    <a href="http://www.linkedin.com/in/hugomiranda94" target="_blank">
+      <img src="/assets/social/linkedin.svg">
+    </a>
+    <a href="http://www.github.com/hughmiranda94" target="_blank">
+      <img src="/assets/social/github.svg">
+    </a>
+    <a href="http://www.instagram.com/hughmiranda" target="_blank">
+      <img src="/assets/social/instagram.svg">
+    </a>
+  </div>
+  <div class="absolute home-container" [ngClass]="{'display-content': displayContent}">
+    <div class="card" (click)="scrollTo('about')">
+      <div class="main">
+        <img src="/assets/hugh.jpg">
+        <p class="title shimmer">HUGO MIRANDA</p>
+        <div>
+          <p class="subtitle" id="subtitle"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

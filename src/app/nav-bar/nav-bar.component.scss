@@ -1,0 +1,130 @@
+.nav-bar {
+  // height: 75px;
+  width: 200px;
+  padding: 1rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #ebebeb;
+  transition: all 0.3s;
+  background-size: cover;
+  position: fixed;
+  right: 5px;
+  left: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  // font-family: 'Share Tech Mono', monospace;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-flow: column;
+      // justify-content: space-around;
+      // align-content: center;
+      // display: none;
+      padding: 0;
+      transition: all 0.3s;
+
+      li {
+        font-size: 16px;
+        transition: all 0.2s ease-out;
+        &:nth-child(3) {
+          transition-delay: 0.05s;
+        }
+        &:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+        &:nth-child(1) {
+          transition-delay: 0.15s;
+        }
+        color: #fff;
+        // border-radius: 5px;
+        padding: 5px;
+        background-color: transparent;
+        filter: opacity(0);
+        pointer-events: none;
+        display: flex;
+        justify-content: flex-end;
+
+        p {
+          margin: 0;
+        }
+
+        &:hover {
+          transition-delay: 0s !important;
+          transform: translateX(-5px);
+          // text-align: center;
+          // justify-content: flex-start;
+          background-image: linear-gradient(to right, rgba(white, 0.5), rgba(white, 1));
+          color: #000;
+        }
+      }
+
+      &.nav-items--display {
+        display: flex;
+
+        li:nth-child(1) {
+          transition-delay: 0.05s;
+        }
+        li:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+        li:nth-child(3) {
+          transition-delay: 0.15s;
+        }
+
+        li {
+          filter: opacity(100%);
+          cursor: pointer;
+          pointer-events: all;
+        }
+      }
+
+      @keyframes show {
+        0% {transform: rotateZ(0deg)}
+        25% {transform: rotateZ(5deg)}
+        75% {transform: rotateZ(-5deg)}
+        100% {transform: rotateZ(0deg)}
+      }
+    }
+
+    .nav-toggle {
+      cursor: pointer;
+    }
+
+    &.logo {
+      cursor: pointer;
+      transition: all 0.3s;
+      img {
+        width: 40px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .icon {
+      .bar {
+        background-color: #fff;
+        width: 25px;
+        height: 3px;
+        margin: 3px 0;
+        transition: all 0.3s;
+      }
+
+      &.icon--cross {
+        #bar-1 {
+          width: 12.5px;
+          transform: rotate(-45deg) translate(6px,9px);
+        }
+        #bar-2 {
+          transform: rotate(45deg);
+        }
+        #bar-3 {
+          width: 12.5px;
+          transform: rotate(-45deg) translateX(1px);
+        }
+      }
+    }
+}

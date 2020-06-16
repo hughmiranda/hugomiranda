@@ -1,0 +1,73 @@
+.skills {
+  // height: 100vh;
+  // width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  // transform: rotateZ(350deg);
+
+  .skills-carousel {
+    color: #fff;
+    overflow: hidden;
+    overflow-x: scroll;
+    position: relative;
+    // background-image: url('/assets/stars-4k.jpg');
+    // background-image: url('/assets/nebula.jpg');
+    // background-image: url('/assets/skills/white.jpg');
+    // background-size: cover;
+    // background-color: gray;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.2) 90%
+      );
+      box-shadow: 0px 0px 25px rgba(255,255,255,0.25);
+    height: 75%;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+
+    &.filters--display {
+      overflow: hidden;
+    }
+
+    .skills-grid {
+      display: grid;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: repeat(15, 6%);
+      grid-template-rows:repeat(1, 100%);
+      grid-auto-flow: column;
+      grid-auto-columns: 6%;
+
+      .skill {
+        height: 100px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 40%;
+        }
+      }
+    }
+  }
+
+  .filters {
+    position: absolute;
+    top:-100%;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+
+    &.filters--display {
+      top:0;
+    }
+  }
+}

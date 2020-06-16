@@ -1,0 +1,13 @@
+<div class="skills" skills-container>
+  <div>
+    <p>Skills</p>
+  </div>
+  <div class="skills-carousel" [ngClass]="{'filters--display': showFilters}" skills-carousel>
+    <div class="skills-grid" skills-grid>
+      <div class="skill" *ngFor="let skill of skills">
+        <img src="{{skill.img}}">
+        <p>{{skill.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
